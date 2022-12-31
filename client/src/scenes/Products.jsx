@@ -26,7 +26,6 @@ const Product = ({
 }) => {
   const theme = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <Card
       sx={{
@@ -118,7 +117,7 @@ const Products = () => {
                 rating={rating}
                 category={category}
                 supply={supply}
-                stat={stat}
+                stat={stat[0]}
               />
             )
           )}
