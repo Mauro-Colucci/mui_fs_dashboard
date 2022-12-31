@@ -1,16 +1,20 @@
 import mongoose from "mongoose";
 
 //just for seeding purposes
-import User from "../models/User.js";
+/* import User from "../models/User.js";
 import Product from "../models/Product.js";
 import ProductStat from "../models/ProductStat.js";
 import Transaction from "../models/Transaction.js";
+import OverallStat from "../models/OverallStat.js";
+import AffiliateStat from "../models/AffiliateStat.js";
 import {
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
-} from "../data/index.js";
+  dataOverallStat,
+  dataAffiliateStat,
+} from "../data/index.js"; */
 
 const connectDB = async () => {
   try {
@@ -18,10 +22,12 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URL);
 
     /* just for seeding purposes
-    await User.insertMany(dataUser);
-    await Product.insertMany(dataProduct);
-    await ProductStat.insertMany(dataProductStat); 
-    Transaction.insertMany(dataTransaction);*/
+    User.insertMany(dataUser);
+    Product.insertMany(dataProduct);
+    ProductStat.insertMany(dataProductStat); 
+    Transaction.insertMany(dataTransaction);
+    OverallStat.insertMany(dataOverallStat);
+    AffiliateStat.insertMany(dataAffiliateStat);*/
     console.log(`connected to ${conn.connection.name} DB`);
   } catch (err) {
     console.error(err);
